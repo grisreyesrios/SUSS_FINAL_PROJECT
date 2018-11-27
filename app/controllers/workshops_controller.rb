@@ -1,6 +1,6 @@
 class WorkshopsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
-  before_action :find_and_authorize_current_space, only: [:show, :edit, :update, :destroy]
+  before_action :find_and_authorize_current_workshop, only: [:show, :edit, :update, :destroy]
 
   def index
     # @workshops = Workshop.all
