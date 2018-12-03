@@ -7,16 +7,37 @@
   padding:7px 49px;
   text-decoration:none;
 }
+
 .btn-book:hover {
   background-color:#ceff99;
 }
+
+
 .btn-book:active {
   position:relative;
   top:1px;
 }
 
 .btn-info {
-  background-color:#c0bdbd;
+  background-color: #FF5634;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:17px;
+  padding:7px 49px;
+  text-decoration:none;
+}
+.btn-info:hover {
+  background-color: #D4FFA8;
+  color: black;
+}
+.btn-info:active {
+  position:relative;
+  top:1px;
+}
+
+.btn-add {
+  background-color:#ffeed0;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
@@ -31,5 +52,8 @@
   position:relative;
   top:1px;
 }
+
+
+
 
 
