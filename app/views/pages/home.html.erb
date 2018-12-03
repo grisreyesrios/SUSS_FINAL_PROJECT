@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-xs-4">
           <ul style="background-color: red">
-             <li><%= image_tag "sewing.png", height: 100 %></li>
+            <li><input type="text" name="query" id="query" class="form-control" value="Painting"></li>
             <li><input type="text" name="query" id="query" class="form-control" value="Pottery"></li>
             <li><input type="text" name="query" id="query" class="form-control" value="Printmaking"></li>
             <li><input type="text" name="query" id="query" class="form-control" value="Photography"></li
@@ -39,10 +39,12 @@
   </div>
 
   <div id="search-box-drop">
-    <ul style="background-color: blue; height: 300px;">
-    <%= form_tag workshops_path, method: :get do %>
-    <%= submit_tag("sumbit") %>
-    <% end %>
+    <ul style="background-color: white; height: 300px;">
+    <%= form_tag(workshops_path, method: "get") do %>
+<!--   <h2><%= label_tag(:query_category) %></h2> -->
+ <%= select_tag(:query_category)%>
+  <%= submit_tag(value = "Select") %>
+<% end %>
   </ul>
 </div>
 
