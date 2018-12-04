@@ -11,49 +11,28 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
-          <ul style="background-color: red">
-            <li><input type="text" name="query" id="query" class="form-control" value="Painting"></li>
-            <li><input type="text" name="query" id="query" class="form-control" value="Pottery"></li>
-            <li><input type="text" name="query" id="query" class="form-control" value="Printmaking"></li>
-            <li><input type="text" name="query" id="query" class="form-control" value="Photography"></li
-            <li><input type="text" name="query" id="query" class="form-control" value="Sculpture"></li>
+        <div class="droppable-container">
+          <ul class='droppable-dropzone' style="background-color: red">
+            <% Workshop::CATEGORIES.each do |category| %>
+              <li data-value="<%= category %>" class='draggable-item'><%= category %></li>
+            <% end %>
           </ul>
+        </div>
       </div>
-       <div class="col-xs-4">
-          <ul style="background-color: red">
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-          </ul>
-      </div>
-       <div class="col-xs-4">
-          <ul style="background-color: red">
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-          </ul>
+    </div>
+    <div class="flex-container">
+      <div class="droppable-container" style="display: flex; justify-content: center; border: 5px solid black">
+        <ul id="search-box-drop" class='droppable-dropzone' style="background-color: white; height: 300px; width: 100%">
+        </ul>
       </div>
     </div>
   </div>
-<div class= "flex-container">
-  <div id="search-box-drop" style="display: flex, justify-content: center">
-    <ul style="background-color: white; height: 300px>
-    <%= form_tag(workshops_path, method: "get") do %>
-     <%= label_tag(:query) %>
-  <%= submit_tag(value = "Select") %>
-<% end %>
-  </ul>
-</div>
-</div>
 
-<!-- editor-container -->
-
-  <div class="landing-search">
-  </div>
-
-  <div class="icon-bar">
+    <%= form_tag workshops_path, method: "get" do %>
+      <%= text_field_tag(:query_category) %>
+      <%= submit_tag(value = "Select") %>
+    <% end %>
+<div class="icon-bar">
     <div class="landing-icon">
       <%= image_tag "sewing.png", height: 100 %>
     </div>

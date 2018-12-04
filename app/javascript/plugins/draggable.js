@@ -1,11 +1,16 @@
-import { Sortable } from '@shopify/draggable';
+import { Droppable } from '@shopify/draggable';
 
-const sortable = new Sortable(document.querySelectorAll('ul'), {
-  draggable: 'li'
+const droppable = new Droppable(document.querySelectorAll('.droppable-container'), {
+  draggable: '.draggable-item',
+  dropzone: '.droppable-dropzone'
 });
 
+console.log(droppable)
+droppable.on('droppable:dropped', () => console.log('droppable:dropped'));
+droppable.on('droppable:returned', () => console.log('droppable:returned'));
 
-setInterval( function search()  {
+
+/*setInterval( function search()  {
   var count = 0
   var searchBox = document.querySelector("#search-box-drop > ul")
   if (searchBox) {
@@ -16,5 +21,5 @@ setInterval( function search()  {
     var count = searchBoxInit
     }
 }}, 1000);
-
+*/
 
