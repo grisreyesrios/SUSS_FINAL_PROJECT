@@ -37,15 +37,15 @@
       </div>
     </div>
   </div>
-
-  <div id="search-box-drop">
-    <ul style="background-color: white; height: 300px;">
+<div class= "flex-container">
+  <div id="search-box-drop" style="display: flex, justify-content: center">
+    <ul style="background-color: white; height: 300px>
     <%= form_tag(workshops_path, method: "get") do %>
-<!--   <h2><%= label_tag(:query_category) %></h2> -->
- <%= select_tag(:query_category)%>
+     <%= label_tag(:query) %>
   <%= submit_tag(value = "Select") %>
 <% end %>
   </ul>
+</div>
 </div>
 
 <!-- editor-container -->
