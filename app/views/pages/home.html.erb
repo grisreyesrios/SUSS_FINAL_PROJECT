@@ -16,8 +16,7 @@
             <% Workshop::CATEGORIES.each do |category| %>
               <li data-value="<%= category %>" class='sortable-item'>
 
-                <%= category %>
-                <%= image_tag "paintbrush.png", height: 100 %>
+                <%= category image_tag "paintbrush.png", height: 60%>
 
               </li>
             <% end %>
