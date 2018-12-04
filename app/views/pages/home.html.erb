@@ -11,26 +11,30 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
-        <div class="droppable-container">
-          <ul class='droppable-dropzone' style="background-color: red">
+        <div class="sortable-container">
+          <ul class='sortable-dropzone' style="background-color: red">
             <% Workshop::CATEGORIES.each do |category| %>
-              <li data-value="<%= category %>" class='draggable-item'><%= category %></li>
+              <li data-value="<%= category %>" class='sortable-item'>
+
+                <%= category %>
+
+              </li>
             <% end %>
           </ul>
         </div>
       </div>
     </div>
     <div class="flex-container">
-      <div class="droppable-container" style="display: flex; justify-content: center; border: 5px solid black">
-        <ul id="search-box-drop" class='droppable-dropzone' style="background-color: white; height: 300px; width: 100%">
+      <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
+        <ul id="search-box-drop" class='sortable-dropzone' style="background-color: white; height: 300px; width: 100%">
         </ul>
       </div>
     </div>
   </div>
 
-    <%= form_tag workshops_path, method: "get" do %>
-      <%= text_field_tag(:query_category) %>
-      <%= submit_tag(value = "Select") %>
+    <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
+      <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
+      <%= submit_tag("Search") %>
     <% end %>
 <div class="icon-bar">
     <div class="landing-icon">
