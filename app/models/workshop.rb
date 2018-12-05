@@ -36,7 +36,7 @@ class Workshop < ApplicationRecord
  social
  textiles
  theoretical
- reading group
+ reading
  tour
  writing
  sculpture
