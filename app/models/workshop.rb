@@ -41,7 +41,5 @@ class Workshop < ApplicationRecord
  writing
  sculpture
  woodwork
-
  other
   )
-end
