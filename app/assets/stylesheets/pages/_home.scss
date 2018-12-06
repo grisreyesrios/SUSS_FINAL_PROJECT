@@ -2,7 +2,11 @@
 body {
   background-color: #eee9eb;
 }
+#search-box-drop{
+  background: repeating-linear-gradient(45deg,transparent,transparent 10px,#ccc 10px,#ccc 20px),linear-gradient(to bottom,#eee,#999);
 
+    flex-wrap: wrap;
+}
 .main {
   min-height: calc(100vh - 191px)
 }
@@ -225,10 +229,21 @@ h2 {
 }
 
 .sortable-container {
-  li {list-style: none;
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+        justify-content: flex-start;
+        height:fit-content;
+
   }
 }
-
+.bigger{
+ img{
+  height:60px !important;
+  width:60px !important;
+ }
+}
 .col-xs-8{
   h2{
     color: black;
