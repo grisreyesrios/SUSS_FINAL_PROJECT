@@ -3,6 +3,9 @@ body {
   background-color: #eee9eb;
 }
 
+.main {
+  min-height: calc(100vh - 191px)
+}
 
 #splash-info {
   font-size: 14px;
@@ -26,6 +29,8 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #8C3DC3;
+  font-size: 40px;
+  color: #8147BC;
 }
 
 .landing-search {
