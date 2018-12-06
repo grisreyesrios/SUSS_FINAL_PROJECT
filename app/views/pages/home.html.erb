@@ -18,37 +18,37 @@
           <% Workshop::CATEGORIES.each do |category| %>
           <div class="col-xs-3">
 
-            <li data-value="<%= category %>" class='sortable-item icon-home' style = "list-style-type: none">
-              <% asset_url = "#{category}.png" %>
-              <%= image_tag(asset_url, width: 45, height: 45) %>
+          <li data-value="<%= category %>" class='sortable-item icon-home' style = "list-style-type: none">
+            <% asset_url = "#{category}.png" %>
+            <%= image_tag(asset_url, width: 45, height: 45) %>
             <%= label_tag(category)%>
           </li>
         </div>
-          <% end %>
-        </ul>
-      </div>
+        <% end %>
+      </ul>
     </div>
+  </div>
 
 
 
 
   <div class="col-xs-8">
- <div class="flex-container">
-       <h2 style="text-align: center; padding-left: 20px">2. Drag and drop your choices here</h2>
-        <div class="sortable-container" style="display: flex; justify-content: center">
+   <div class="flex-container">
+     <h2 style="text-align: center; padding-left: 20px">2. Drag and drop your choices here</h2>
+     <div class="sortable-container" style="display: flex; justify-content: center">
 
-          <ul id="search-box-drop" class='sortable-dropzone' style="display: flex;  height: 500px; width: 90%">
-          </ul>
-        </div>
-      </div>
-      <div>
-        <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
-        <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
-        <%= submit_tag("Search", :class => "btn btn-secondary btn-lg btn-block" ) %>
-        <% end %>
-      </div>
+      <ul id="search-box-drop" class='sortable-dropzone' style="display: flex;  height: 500px; width: 90%">
+      </ul>
     </div>
   </div>
+  <div>
+    <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
+    <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
+    <%= submit_tag("Search", :class => "btn btn-secondary btn-lg btn-block" ) %>
+    <% end %>
+  </div>
+</div>
+</div>
 </div>
 
 
@@ -101,25 +101,25 @@
     <div class="meet-team-header">
       Meet the ArtHuddle Team
       <p>Find out more about us on GitHub<p>
-    </div>
-    <div class="team-container">
-      <div class="team-column">
-        <%= image_tag "griselle.png", class: 'team-img' %>
-        <a href="https://github.com/grisreyesrios">Grisell Reyes Rios</a>
       </div>
-      <div class="team-column">
-        <%= image_tag "Image of ME.jpeg", class: 'team-img' %>
-        <a href="https://github.com/KatharineDoyle">Katharine Doyle</a>
-      </div>
-      <div class="team-column">
-        <%= image_tag "Sam_pic.jpg", class: 'team-img' %>
-        <a href="https://github.com/samb753">Samuel Beca</a>
+      <div class="team-container">
+        <div class="team-column">
+          <%= image_tag "griselle.png", class: 'team-img' %>
+          <a href="https://github.com/grisreyesrios">Grisell Reyes Rios</a>
+        </div>
+        <div class="team-column">
+          <%= image_tag "imageofme.jpg", class: 'team-img' %>
+          <a href="https://github.com/KatharineDoyle">Katharine Doyle</a>
+        </div>
+        <div class="team-column">
+          <%= image_tag "Sam_pic.jpg", class: 'team-img' %>
+          <a href="https://github.com/samb753">Samuel Beca</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 </div>
 
-</div>
+
 
