@@ -296,11 +296,16 @@ h2 {
   h1 {
     font-size: 25px;
   }
+  a:hover {
+ text-decoration: none !important;
+  }
+
 }
 
 .landing-box-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+
+}
